@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biên bản Tâm sự — Trọng Tín Studio | NGỌT Studio Consultancy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A0A0A; --cream:#F5F0E8; --gold:#C9A84C; --gold-light:#E8C96A; --gold-dark:#8C6D2A;
+  --warm-gray:#8A7F74; --steel:#3A4A5C; --steel-light:#6E8698; --forest:#2A4A3A;
+  --surface:#12151A; --surface-2:#1A1F26; --alert:#A8756A;
+  --line:rgba(201,168,76,.18); --line-soft:rgba(245,240,232,.10);
+  --display:'Playfair Display',serif; --body:'Be Vietnam Pro',sans-serif; --mono:'DM Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:15px;
+  line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(10,10,10,.95);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--line);height:60px;
+  display:flex;align-items:center;padding:0 clamp(16px,4vw,36px);gap:18px}
+.nb{display:flex;align-items:center;gap:9px;flex-shrink:0;text-decoration:none}
+.nb svg{width:24px;height:24px;color:var(--gold)}
+.nb b{font-family:var(--display);font-size:16px;color:var(--cream);font-weight:700}
+.nb span{font-family:var(--mono);font-size:8px;letter-spacing:.16em;color:var(--warm-gray);
+  text-transform:uppercase;display:block;margin-top:-2px}
+.nl{margin-left:auto;display:flex;gap:3px;overflow-x:auto;scrollbar-width:none}
+.nl::-webkit-scrollbar{display:none}
+.nl a{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--warm-gray);text-decoration:none;padding:6px 9px;border-radius:2px;
+  transition:.2s;white-space:nowrap}
+.nl a:hover{color:var(--cream);background:rgba(245,240,232,.06)}
+.nl a.on{color:var(--gold)}
+.nbg{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--gold);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;padding:7px 12px;cursor:pointer;border-radius:2px}
+@media(max-width:1000px){
+  .nl{display:none}.nbg{display:block}
+  .nl.show{display:flex;position:fixed;top:60px;left:0;right:0;flex-direction:column;
+    background:rgba(10,10,10,.99);border-bottom:1px solid var(--line);padding:12px;gap:4px;
+    max-height:calc(100vh - 60px);overflow-y:auto}
+}
+
+.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(16px,4vw,28px)}
+
+/* ── HERO ── */
+header{padding:100px 0 10px;position:relative;isolation:isolate}
+header::before{content:'';position:absolute;inset:-40px 0 0;pointer-events:none;z-index:-1;
+  background:radial-gradient(ellipse 50% 60% at 80% 35%,rgba(58,74,92,.35),transparent 70%),
+             radial-gradient(ellipse 40% 50% at 10% 70%,rgba(201,168,76,.09),transparent 70%)}
+.kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:13px;margin-bottom:20px;flex-wrap:wrap}
+.kick::before{content:'';width:32px;height:1px;background:var(--gold);flex-shrink:0}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,5.2vw,52px);line-height:1.08;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--gold)}
+.lede{color:#D4CECC;font-size:16px;max-width:66ch;line-height:1.8;margin-bottom:13px}
+.lede b{color:var(--cream);font-weight:600}
+.stance{font-family:var(--display);font-style:italic;font-size:17px;color:var(--gold-light);
+  border-left:2px solid var(--gold);padding:6px 0 6px 16px;margin:24px 0 0;max-width:62ch;line-height:1.55}
+
+/* ── ROADMAP ── */
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;margin:34px 0 0;overflow:hidden}
+.road div{background:var(--ink);padding:18px 16px}
+.road .rn{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--steel-light);margin-bottom:8px}
+.road .rt{font-family:var(--display);font-size:18px;font-weight:700;color:var(--cream);line-height:1.25;margin-bottom:6px}
+.road .rd{font-size:12px;color:var(--warm-gray);line-height:1.55}
+@media(max-width:760px){.road{grid-template-columns:repeat(2,1fr)}}
+
+/* ── SECTION ── */
+section{padding:56px 0 0;scroll-margin-top:74px}
+.sh{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line-soft);
+  padding-bottom:10px;margin-bottom:22px}
+.sh .no{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--gold);flex-shrink:0}
+.sh h2{font-family:var(--display);font-size:clamp(21px,3vw,30px);font-weight:700;color:var(--cream);line-height:1.2}
+.sh .tail{margin-left:auto;font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--steel-light);white-space:nowrap}
+@media(max-width:680px){.sh .tail{display:none}}
+
+p.body{color:#D4CECC;max-width:74ch;margin-bottom:15px;line-height:1.8}
+p.body b{color:var(--cream);font-weight:600}
+p.body .hl{color:var(--gold-light);font-weight:600}
+
+/* ── FACT GRID (01) ── */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);
+  border:1px solid var(--line-soft);border-radius:2px;overflow:hidden;margin-bottom:16px}
+.facts div{background:var(--surface);padding:17px 16px}
+.facts .fl{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--warm-gray);margin-bottom:9px;line-height:1.4}
+.facts .fv{font-family:var(--display);font-size:24px;font-weight:700;color:var(--gold);line-height:1.05}
+.facts .fv.sm{font-size:19px}
+.facts .fv.alert{color:var(--alert)}
+.facts .fn{font-size:11px;color:var(--warm-gray);margin-top:6px;line-height:1.5}
+@media(max-width:820px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+.saidlist{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:760px){.saidlist{grid-template-columns:1fr}}
+.said{border:1px solid var(--line-soft);border-radius:2px;padding:20px;background:rgba(245,240,232,.02)}
+.said .sl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:14px;display:block}
+.said ul{list-style:none}
+.said li{position:relative;padding-left:18px;margin-bottom:10px;font-size:13.5px;
+  color:#D4CECC;line-height:1.6}
+.said li:last-child{margin-bottom:0}
+.said li::before{content:'—';position:absolute;left:0;color:var(--warm-gray)}
+.said li b{color:var(--cream);font-weight:600}
+
+/* ── DIAGNOSIS CARD ── */
+.dcard{border:1px solid var(--line-soft);border-radius:2px;margin-bottom:18px;overflow:hidden;background:var(--surface)}
+.dcard.open{border-color:var(--line)}
+.dh{display:grid;grid-template-columns:auto 1fr auto;gap:0 18px;align-items:center;
+  padding:19px 22px;cursor:pointer;user-select:none;background:rgba(245,240,232,.03);transition:.25s}
+.dcard.open .dh{background:rgba(201,168,76,.09)}
+.dnum{font-family:var(--display);font-weight:900;font-size:30px;color:var(--gold);line-height:.9;
+  font-variant-numeric:tabular-nums}
+.dtt{font-family:var(--display);font-size:20px;font-weight:700;color:var(--cream);line-height:1.28}
+.dtt small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--steel-light);margin-top:6px;font-weight:400}
+.dx{font-family:var(--mono);font-size:17px;color:var(--warm-gray);transition:.3s;flex-shrink:0}
+.dcard.open .dx{transform:rotate(45deg);color:var(--gold)}
+.db{max-height:0;overflow:hidden;transition:max-height .45s ease}
+.dcard.open .db{max-height:1400px}
+.dsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft)}
+@media(max-width:900px){.dsteps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.dsteps{grid-template-columns:1fr}}
+.dstep{background:var(--surface);padding:21px 19px;display:flex;flex-direction:column}
+.dstep .dl{font-family:var(--mono);font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;
+  margin-bottom:13px;display:flex;align-items:center;gap:7px}
+.dstep .dl i{width:15px;height:15px;border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;font-style:normal;font-size:9px;flex-shrink:0;font-family:var(--mono)}
+.dstep.s1 .dl{color:var(--cream)} .dstep.s1 .dl i{background:rgba(245,240,232,.16);color:var(--cream)}
+.dstep.s2 .dl{color:var(--steel-light)} .dstep.s2 .dl i{background:rgba(110,134,152,.28);color:var(--steel-light)}
+.dstep.s3 .dl{color:var(--alert)} .dstep.s3 .dl i{background:rgba(168,117,106,.25);color:var(--alert)}
+.dstep.s4 .dl{color:var(--gold)} .dstep.s4 .dl i{background:rgba(201,168,76,.22);color:var(--gold)}
+.dstep.s3{background:rgba(181,118,106,.07)}
+.dstep.s4{background:rgba(201,168,76,.07)}
+.dbig{font-family:var(--display);font-size:33px;font-weight:900;line-height:1;margin-bottom:11px;
+  font-variant-numeric:tabular-nums;color:var(--cream)}
+.dstep.s3 .dbig{color:var(--alert)}
+.dstep.s4 .dbig{color:var(--gold)}
+.dstep p{font-size:13px;color:#D4CECC;line-height:1.68;margin-bottom:9px}
+.dstep p:last-child{margin-bottom:0}
+.dstep ul{list-style:none;margin-top:2px}
+.dstep li{position:relative;padding-left:15px;margin-bottom:8px;font-size:13px;color:#D4CECC;line-height:1.6}
+.dstep li:last-child{margin-bottom:0}
+.dstep li::before{content:'·';position:absolute;left:3px;color:var(--steel-light);font-weight:700}
+.dstep b{color:var(--cream);font-weight:600}
+.dsrc{padding:14px 22px;background:rgba(58,74,92,.2);border-top:1px solid var(--line-soft);
+  font-family:var(--mono);font-size:10.5px;color:var(--gold);line-height:1.65}
+.dsrc::before{content:'ANH TÍN CUNG CẤP · ';color:var(--warm-gray);letter-spacing:.14em;font-size:8.5px}
+.hint{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:16px}
+
+/* ── SPLIT BAR ── */
+.split{border:1px solid rgba(110,134,152,.3);background:rgba(58,74,92,.18);
+  border-radius:2px;padding:24px;margin:22px 0}
+.split .sph{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:20px}
+.sprow{display:grid;grid-template-columns:150px 1fr 110px;gap:14px;align-items:center;margin-bottom:12px}
+.sprow:last-of-type{margin-bottom:0}
+.sprow .spl{font-size:13px;color:#D4CECC;line-height:1.4}
+.spbar{height:28px;background:rgba(245,240,232,.05);border-radius:2px;overflow:hidden}
+.spbar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold))}
+.spbar i.dim{background:rgba(110,134,152,.55)}
+.spbar i.lost{background:rgba(168,117,106,.4)}
+.spv{font-family:var(--mono);font-size:12.5px;color:var(--gold);text-align:right;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.spv.dim{color:var(--steel-light)} .spv.lost{color:var(--alert)}
+@media(max-width:640px){.sprow{grid-template-columns:1fr;gap:5px}.spv{text-align:left}}
+.spnote{margin-top:18px;padding-top:16px;border-top:1px solid rgba(110,134,152,.25);
+  font-size:13.5px;color:#D4CECC;line-height:1.7}
+.spnote b{color:var(--gold-light)}
+
+/* ── CALLOUT ── */
+.callout{background:var(--surface);border-left:3px solid var(--gold);padding:19px 21px;
+  margin:20px 0;border-radius:0 2px 2px 0}
+.callout .cl{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:10px}
+.callout p{color:var(--cream);font-size:15px;line-height:1.78;margin-bottom:10px}
+.callout p:last-child{margin-bottom:0}
+.callout.steel{border-left-color:var(--steel-light);background:rgba(58,74,92,.2)}
+.callout.steel .cl{color:var(--steel-light)}
+.callout.alert{border-left-color:var(--alert);background:rgba(168,117,106,.07)}
+.callout.alert .cl{color:var(--alert)}
+
+/* ── PRIORITY ── */
+.prio{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+@media(max-width:900px){.prio{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.prio{grid-template-columns:1fr}}
+.pc{border:1px solid var(--line-soft);border-radius:2px;padding:19px;background:var(--surface);
+  position:relative;overflow:hidden}
+.pc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--steel-light)}
+.pc.p1::before{background:var(--gold)}
+.pc .po{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:10px}
+.pc.p1 .po{color:var(--gold)}
+.pc h4{font-family:var(--display);font-size:17px;font-weight:700;color:var(--cream);line-height:1.3;margin-bottom:9px}
+.pc p{font-size:12.5px;color:#D4CECC;line-height:1.65}
+.pc .pw{font-family:var(--mono);font-size:10px;color:var(--gold);margin-top:11px;
+  padding-top:10px;border-top:1px solid var(--line-soft);display:block;line-height:1.5}
+
+/* ── CALCULATOR ── */
+.calc{border:1px solid var(--gold);border-radius:2px;background:rgba(201,168,76,.05);
+  padding:26px;margin:24px 0}
+.calc .ch{font-family:var(--display);font-size:21px;font-weight:700;color:var(--cream);margin-bottom:7px}
+.calc .cs{font-size:13.5px;color:var(--warm-gray);margin-bottom:22px;line-height:1.7;max-width:72ch}
+.calc .cs b{color:#D4CECC}
+.calc label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.calc label .cv{font-family:var(--display);font-size:30px;font-weight:900;
+  font-variant-numeric:tabular-nums;letter-spacing:0;vertical-align:-4px;margin:0 3px}
+.calc input[type=range]{width:100%;accent-color:var(--gold);height:4px;margin-bottom:7px;cursor:pointer}
+.crow{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;
+  color:var(--warm-gray);margin-bottom:22px;gap:8px}
+.cout{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:780px){.cout{grid-template-columns:repeat(2,1fr)}}
+.cout div{background:var(--ink);padding:17px 15px}
+.cout .cl2{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--warm-gray);margin-bottom:9px;line-height:1.45}
+.cout .cvv{font-family:var(--display);font-size:26px;font-weight:700;line-height:1.05;
+  font-variant-numeric:tabular-nums;color:var(--gold)}
+.cout .cn{font-size:11px;color:var(--warm-gray);margin-top:7px;line-height:1.5}
+.cbadge{margin-top:18px;padding:14px 17px;border:1px solid var(--line);background:var(--surface);
+  border-radius:2px;font-size:14px;color:var(--cream);line-height:1.7}
+.cbadge b{color:var(--gold-light)}
+
+/* ── TABLE ── */
+table{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:13.5px}
+th{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);font-weight:400}
+td{padding:11px 12px;border-bottom:1px solid rgba(245,240,232,.07);color:#D4CECC;
+  vertical-align:top;line-height:1.6}
+td b{color:var(--cream);font-weight:600}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.emph td{background:rgba(201,168,76,.07);color:var(--cream)}
+tr.emph td b{color:var(--gold-light)}
+tr.warn td{background:rgba(168,117,106,.10)}
+tr.warn td b{color:var(--alert)}
+@media(max-width:620px){table{font-size:12.5px}th,td{padding:9px 8px}}
+
+/* ── PACKAGE COMPARE ── */
+.pk{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+@media(max-width:820px){.pk{grid-template-columns:1fr}}
+.pkc{border:1px solid var(--line-soft);border-radius:2px;overflow:hidden;background:var(--surface);
+  display:flex;flex-direction:column}
+.pkc.reco{border-color:var(--gold)}
+.pkh{padding:22px;border-bottom:1px solid var(--line-soft);position:relative}
+.pkc.reco .pkh{background:rgba(201,168,76,.09)}
+.pkc:not(.reco) .pkh{background:rgba(58,74,92,.22)}
+.pkt{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:11px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.pkc.reco .pkt{color:var(--gold)}
+.pkt em{font-style:normal;font-size:8.5px;letter-spacing:.14em;color:var(--ink);
+  background:var(--gold);padding:2px 9px;border-radius:40px}
+.pkc h3{font-family:var(--display);font-size:23px;font-weight:700;color:var(--cream);
+  line-height:1.24;margin-bottom:11px}
+.pkprice{font-family:var(--display);font-size:34px;font-weight:900;color:var(--gold);
+  line-height:1;font-variant-numeric:tabular-nums}
+.pkprice small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--warm-gray);
+  font-weight:400;text-transform:uppercase;display:block;margin-top:8px}
+.pkc:not(.reco) .pkprice{color:var(--steel-light)}
+.pkline{font-family:var(--display);font-style:italic;font-size:17px;color:var(--gold-light);
+  padding:18px 22px;border-bottom:1px solid var(--line-soft);line-height:1.5}
+.pkc:not(.reco) .pkline{color:var(--steel-light)}
+.pkb{padding:20px 22px;flex:1}
+.pkrow{display:grid;grid-template-columns:96px 1fr;gap:13px;padding:10px 0;
+  border-bottom:1px solid rgba(245,240,232,.06);align-items:start}
+.pkrow:last-child{border-bottom:none;padding-bottom:0}
+.pkrow .k{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--warm-gray);padding-top:3px}
+.pkrow .v{font-size:13.5px;color:#D4CECC;line-height:1.65}
+.pkrow .v b{color:var(--cream);font-weight:600}
+@media(max-width:560px){.pkrow{grid-template-columns:1fr;gap:4px}.pkrow .k{padding-top:0}}
+
+/* ── SELF TEST ── */
+.test{border:1px solid rgba(110,134,152,.32);background:rgba(58,74,92,.18);border-radius:2px;
+  padding:26px;margin:24px 0}
+.test .th2{font-family:var(--display);font-size:21px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.test .ts{font-size:13.5px;color:var(--warm-gray);margin-bottom:20px;line-height:1.7;max-width:70ch}
+.tq{display:flex;gap:14px;align-items:flex-start;padding:15px 17px;border:1px solid var(--line-soft);
+  cursor:pointer;transition:.22s;background:rgba(10,10,10,.35);user-select:none;margin-bottom:10px;border-radius:2px}
+.tq:hover{border-color:var(--line)}
+.tq.on{border-color:var(--gold);background:rgba(201,168,76,.09)}
+.tbox{width:19px;height:19px;border:1px solid var(--warm-gray);border-radius:2px;flex-shrink:0;
+  margin-top:2px;display:flex;align-items:center;justify-content:center;transition:.2s;
+  font-size:12px;color:transparent;font-family:var(--mono)}
+.tq.on .tbox{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.tq span{font-size:14px;color:#D4CECC;line-height:1.6}
+.tq.on span{color:var(--cream)}
+.tres{margin-top:20px;padding:19px 21px;border:1px solid var(--gold);background:rgba(201,168,76,.08);
+  border-radius:2px;font-size:14.5px;color:var(--cream);line-height:1.75}
+.tres b{color:var(--gold-light)}
+.tres .trh{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);display:block;margin-bottom:10px}
+
+/* ── DELIVERABLES ── */
+.del{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+@media(max-width:800px){.del{grid-template-columns:1fr}}
+.dl2{border:1px solid var(--line);border-radius:2px;padding:20px;background:rgba(201,168,76,.04)}
+.dl2.key{border-color:var(--gold);background:rgba(201,168,76,.09)}
+.dl2 .n{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;color:var(--gold);margin-bottom:11px;
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.dl2 .n em{font-style:normal;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink);background:var(--gold);padding:2px 8px;border-radius:40px;font-weight:500}
+.dl2 h4{font-family:var(--display);font-size:18px;font-weight:700;color:var(--cream);
+  line-height:1.3;margin-bottom:8px}
+.dl2 p{font-size:13px;color:#D4CECC;line-height:1.7}
+
+/* ── ASSUMPTIONS ── */
+.assump{border:1px dashed rgba(245,240,232,.2);border-radius:2px;padding:21px;margin:22px 0;
+  background:rgba(245,240,232,.02)}
+.assump .al{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--steel-light);margin-bottom:13px;display:block}
+.assump table{margin:0;font-size:12.5px}
+.assump td{padding:8px 10px}
+.tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
+  padding:2px 7px;border-radius:40px;white-space:nowrap}
+.tag.real{background:rgba(201,168,76,.18);color:var(--gold-light)}
+.tag.est{background:rgba(110,134,152,.22);color:var(--steel-light)}
+
+/* ── FOOTER ── */
+footer{margin-top:60px;border-top:1px solid var(--line);padding:36px 0 60px}
+.fgrid{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:end}
+@media(max-width:700px){.fgrid{grid-template-columns:1fr}}
+footer h3{font-family:var(--display);font-size:24px;font-weight:700;color:var(--cream);margin-bottom:11px}
+footer p{font-size:14px;color:#D4CECC;line-height:1.78;max-width:58ch}
+.contact{font-family:var(--mono);font-size:13px;color:var(--gold);line-height:2;letter-spacing:.02em}
+.contact b{display:block;font-family:var(--display);font-size:19px;color:var(--cream);
+  letter-spacing:0;margin-bottom:5px;font-weight:700}
+.contact i{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--warm-gray);font-style:normal;margin-bottom:9px}
+.sig{display:flex;align-items:center;gap:13px;margin-top:28px;padding-top:19px;
+  border-top:1px solid var(--line-soft)}
+.sig svg{width:30px;color:var(--gold);flex-shrink:0}
+.sig div{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--warm-gray);line-height:1.7}
+.sig em{font-family:var(--display);font-style:italic;font-size:14px;color:var(--gold);
+  letter-spacing:0;text-transform:none;display:block;margin-top:5px}
+
+.topb{position:fixed;right:20px;bottom:20px;width:40px;height:40px;border:1px solid var(--line);
+  background:rgba(10,10,10,.92);color:var(--gold);cursor:pointer;border-radius:2px;font-size:15px;
+  opacity:0;pointer-events:none;transition:.25s;z-index:180}
+.topb.show{opacity:1;pointer-events:auto}
+.topb:hover{background:var(--gold);color:var(--ink)}
+
+@media print{
+  nav,.topb{display:none}
+  body{background:#fff;color:#111}
+  header{padding-top:12px}header::before{display:none}
+  section{padding-top:26px;break-inside:avoid}
+  h1,.sh h2,.dtt,.dl2 h4,footer h3,.pkc h3,.calc .ch,.pc h4,.test .th2{color:#111}
+  p.body,td,.dstep p,.dstep li,.dl2 p,footer p,.cout .cn,.lede,.spnote,.pkrow .v,.said li,.pc p{color:#333}
+  .facts div,.cout div,.dcard,.dstep,.pkc,.said,.pc{background:#fafafa}
+  .calc,.callout,.dl2,.assump,.split,.test{background:#fafafa}
+  .facts .fv,.cout .cvv,.pkprice,.dnum,.dbig{color:#8C6D2A}
+  .db{max-height:none!important}.dx{display:none}
+  .calc input,.crow{display:none}
+}
+
+:root{--alert:#B5766A;--good:#7FA88B}
+/* ── MINI NUMBERS ── */
+.fv.good{color:var(--good)}
+.eq{font-family:var(--mono);font-size:10px;color:var(--steel-light);margin-top:6px;letter-spacing:.04em}
+/* ── P&L STRIP ── */
+.pl{border:1px solid var(--line-soft);background:var(--surface);border-radius:2px;padding:22px;margin:18px 0}
+.pl .plh{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-light);margin-bottom:16px}
+.plbar{display:flex;height:40px;border-radius:2px;overflow:hidden;border:1px solid var(--line-soft)}
+.plbar div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9.5px;
+  letter-spacing:.04em;color:var(--ink);white-space:nowrap;overflow:hidden;cursor:default;transition:filter .2s}
+.plbar div:hover{filter:brightness(1.15)}
+.pllg{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px}
+.pllg span{font-size:12px;color:#D4CECC;display:flex;align-items:center;gap:7px}
+.pllg i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.plnote{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:13.5px;color:#D4CECC;line-height:1.7}
+.plnote b{color:var(--gold-light)}
+/* ── TIME BARS ── */
+.tb{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+@media(max-width:760px){.tb{grid-template-columns:1fr}}
+.tbc{border:1px solid rgba(110,134,152,.3);background:rgba(58,74,92,.16);border-radius:2px;padding:20px}
+.tbc .who{font-family:var(--display);font-size:18px;font-weight:700;color:var(--cream);margin-bottom:3px}
+.tbc .role{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-light);margin-bottom:16px}
+.tr{display:grid;grid-template-columns:1fr 48px;gap:10px;align-items:center;margin-bottom:9px}
+.tr .tl{font-size:12.5px;color:#D4CECC;margin-bottom:5px}
+.tr .tbar{height:8px;background:rgba(245,240,232,.06);border-radius:2px;overflow:hidden}
+.tr .tbar i{display:block;height:100%;background:var(--steel-light)}
+.tr.keep .tbar i{background:var(--gold)}
+.tr.move .tbar i{background:var(--alert)}
+.tr .tp{font-family:var(--mono);font-size:12px;color:var(--cream);text-align:right}
+.tkey{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line-soft)}
+.tkey span{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-gray);display:flex;align-items:center;gap:6px}
+.tkey i{width:9px;height:9px;border-radius:2px;display:inline-block}
+/* ── PLANNER ── */
+.mt{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:2px;overflow:hidden;margin:20px 0 0}
+@media(max-width:760px){.mt{grid-template-columns:repeat(2,1fr)}.mt button:first-child{grid-column:1/-1}}
+.mt button{background:var(--ink);border:0;padding:15px 14px;text-align:left;cursor:pointer;color:var(--warm-gray);transition:.2s;font-family:var(--body)}
+.mt button:hover{background:rgba(245,240,232,.04)}
+.mt button.on{background:rgba(201,168,76,.12)}
+.mt .mn{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-light);display:block;margin-bottom:6px}
+.mt .mv{font-family:var(--display);font-size:22px;font-weight:700;color:var(--cream);display:block;line-height:1}
+.mt button.on .mv{color:var(--gold)}
+.mt .md{font-size:11px;display:block;margin-top:6px;line-height:1.4}
+.mwork{border:1px solid var(--line);border-top:0;background:var(--surface);padding:16px 20px;font-size:13.5px;color:#D4CECC;line-height:1.7}
+.mwork b{color:var(--gold-light)}
+.pln{border:1px solid var(--gold);border-radius:2px;background:rgba(201,168,76,.05);padding:24px;margin:18px 0}
+.sl3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:22px}
+@media(max-width:760px){.sl3{grid-template-columns:1fr}}
+.sl3 label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.sl3 label .cv{font-family:var(--display);font-size:26px;font-weight:900;letter-spacing:0;color:var(--cream);vertical-align:-3px;margin-left:4px}
+.sl3 input{width:100%;accent-color:var(--gold);cursor:pointer}
+.sl3 .sn{font-size:11px;color:var(--warm-gray);margin-top:4px;line-height:1.5}
+.po4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:2px;overflow:hidden}
+@media(max-width:780px){.po4{grid-template-columns:repeat(2,1fr)}}
+.po4 div{background:var(--ink);padding:16px 14px}
+.po4 .k{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:8px}
+.po4 .v{font-family:var(--display);font-size:26px;font-weight:700;color:var(--gold);line-height:1.05;font-variant-numeric:tabular-nums}
+.po4 .n{font-size:11px;color:var(--warm-gray);margin-top:6px;line-height:1.5}
+.staff{margin-top:18px}
+.staff table{margin:0}
+.staff td.num b{color:var(--gold-light)}
+.cap{margin-top:14px;height:10px;background:rgba(245,240,232,.06);border-radius:2px;overflow:hidden;position:relative}
+.cap i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));transition:width .3s}
+.capl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--warm-gray);margin-top:6px}
+details.norm{margin-top:18px;border:1px dashed rgba(245,240,232,.2);border-radius:2px;padding:14px 18px}
+details.norm summary{cursor:pointer;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-light)}
+details.norm .sl3{margin:16px 0 4px}
+/* ── OTHER PACKAGES ── */
+.oth{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+@media(max-width:760px){.oth{grid-template-columns:1fr}}
+.oc{border:1px solid var(--line-soft);border-radius:2px;background:var(--surface);padding:20px;display:flex;flex-direction:column}
+.oc .ol{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel-light);margin-bottom:9px}
+.oc h4{font-family:var(--display);font-size:19px;font-weight:700;color:var(--cream);line-height:1.3;margin-bottom:6px}
+.oc .op{font-family:var(--display);font-size:24px;font-weight:900;color:var(--gold);line-height:1}
+.oc .op small{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-gray);font-weight:400;margin-left:6px}
+.oc p{font-size:13px;color:#D4CECC;line-height:1.65;margin-top:10px}
+.oc .ow{margin-top:auto;padding-top:12px;font-family:var(--mono);font-size:10px;color:var(--gold);line-height:1.5;border-top:1px solid var(--line-soft);margin-top:14px}
+.solves{list-style:none;margin-top:4px}
+.solves li{position:relative;padding-left:18px;margin-bottom:8px;font-size:13.5px;color:#D4CECC;line-height:1.6}
+.solves li::before{content:'✓';position:absolute;left:0;color:var(--good);font-size:12px}
+.solves li b{color:var(--cream)}
+
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="nsc-mark" viewBox="0 0 1077 952">
+    <g transform="translate(0,952) scale(0.1,-0.1)" fill="currentColor" stroke="none">
+      <path d="M4010 9509 c-127 -25 -214 -104 -288 -263 -28 -58 -79 -159 -115 -224 -35 -64 -110 -205 -168 -312 -194 -362 -228 -380 -729 -380 -428 0 -442 5 -632 197 -134 135 -183 164 -280 165 -122 2 -137 -9 -579 -437 -430 -417 -439 -427 -439 -536 0 -113 14 -136 214 -334 281 -277 280 -276 274 -822 -4 -332 -6 -363 -27 -431 -106 -356 -427 -615 -867 -702 -184 -36 -203 -41 -244 -69 -47 -31 -92 -91 -111 -146 -21 -60 -20 -988 0 -1060 35 -120 125 -176 341 -211 465 -74 777 -320 882 -696 18 -64 21 -110 25 -389 8 -506 3 -520 -264 -782 -200 -197 -223 -232 -223 -337 0 -112 8 -122 410 -518 412 -407 423 -416 550 -417 107 0 154 26 325 185 236 218 281 235 640 235 286 0 334 -9 485 -85 275 -139 500 -475 580 -865 26 -124 98 -214 205 -254 57 -21 65 -22 579 -19 l521 3 50 27 c84 44 175 164 175 230 0 50 78 277 134 393 133 272 326 451 577 537 93 31 97 32 324 36 362 6 422 -15 635 -223 165 -162 178 -170 290 -170 112 0 138 15 307 187 181 184 177 173 181 458 4 302 -25 377 -173 450 l-50 25 -2740 5 c-2251 4 -2747 8 -2780 19 -168 56 -287 183 -329 352 -24 96 -25 4617 -1 4718 43 179 185 319 364 357 51 11 172 14 547 14 607 0 610 1 713 176 235 398 603 682 1024 790 749 191 1459 -118 1823 -794 36 -68 110 -135 171 -156 67 -23 1422 -24 1499 -1 170 50 243 165 251 395 9 240 -41 369 -172 446 -83 48 -77 48 -745 54 l-635 5 -65 31 c-83 40 -150 99 -193 172 -94 156 -345 643 -403 780 -24 59 -119 144 -191 174 l-58 23 -775 2 c-426 0 -795 -3 -820 -8z M4521 8074 c-852 -143 -1285 -1119 -814 -1833 475 -720 1563 -725 2027 -10 576 889 -167 2018 -1213 1843z m346 -539 c654 -125 682 -1051 38 -1271 -390 -133 -820 171 -842 596 -22 423 375 757 804 675z M8166 7084 c-301 -73 -490 -402 -397 -694 l21 -65 -233 -227 -232 -227 -475 -1 c-440 0 -478 -2 -515 -19 -161 -74 -145 -305 25 -351 85 -23 1108 -8 1160 16 30 15 128 103 301 272 l256 251 49 -16 c81 -26 263 -24 346 5 391 135 508 625 218 911 -135 134 -339 190 -524 145z m227 -299 c94 -39 157 -134 157 -235 0 -286 -414 -346 -496 -72 -60 199 148 387 339 307z M2125 6873 c-46 -24 -66 -45 -86 -88 -18 -38 -19 -125 -19 -2200 0 -2432 -7 -2208 76 -2271 l37 -29 336 -3 336 -3 45 24 c93 49 84 -108 90 1566 l5 1474 70 -94 c304 -411 617 -844 1090 -1504 996 -1392 1000 -1397 1053 -1427 l47 -28 297 0 c353 0 369 4 419 102 18 36 19 88 19 1849 l0 1812 -42 -54 c-216 -277 -492 -457 -825 -539 l-43 -11 0 -727 -1 -727 -27 34 c-55 68 -317 426 -602 821 -134 185 -176 241 -575 765 -138 182 -319 420 -401 530 -548 732 -520 697 -576 726 -52 27 -673 29 -723 2z M10095 6175 c-166 -37 -304 -146 -378 -297 l-32 -67 -480 -3 -480 -3 -45 -24 c-25 -13 -115 -91 -200 -175 -85 -83 -214 -208 -286 -279 l-131 -127 -847 0 c-929 0 -883 3 -942 -61 -91 -98 -54 -262 69 -308 53 -20 1823 -15 1882 5 51 18 36 4 459 412 l189 182 411 0 411 0 30 -58 c167 -321 621 -382 880 -118 385 391 26 1040 -510 921z m249 -319 c159 -93 164 -325 9 -429 -217 -145 -482 97 -361 329 66 125 230 172 352 100z M8856 4835 c-134 -37 -270 -142 -336 -257 l-32 -58 -1067 0 -1067 0 -45 -29 c-118 -74 -112 -258 11 -321 39 -20 57 -20 1091 -23 923 -2 1053 -4 1060 -17 5 -8 21 -42 36 -75 214 -456 921 -370 1038 128 94 399 -289 762 -689 652z m223 -291 c109 -32 187 -143 179 -253 -20 -260 -367 -331 -482 -99 -98 197 90 416 303 352z M6335 3846 c-117 -53 -149 -211 -62 -304 54 -58 39 -57 582 -60 l500 -3 214 -208 214 -207 -17 -50 c-10 -27 -20 -89 -23 -139 -29 -507 573 -773 938 -415 419 411 -10 1082 -577 903 l-54 -17 -235 235 c-129 129 -252 243 -273 254 -48 26 -1152 36 -1207 11z m2080 -785 c94 -52 147 -161 126 -261 -46 -227 -344 -283 -464 -88 -136 220 111 475 338 349z"/>
+    </g>
+  </symbol>
+</svg>
+
+<nav>
+  <a class="nb" href="#top">
+    <svg viewBox="0 0 1077 952"><use href="#nsc-mark"/></svg>
+    <div><b>NGỌT</b><span>Studio Consultancy</span></div>
+  </a>
+  <button class="nbg" id="burger">MENU</button>
+  <div class="nl" id="navList">
+    <a href="#s1">01 Anh kể gì</a>
+    <a href="#s2">02 Số tôi đọc</a>
+    <a href="#s3">03 Bốn nút nghẽn</a>
+    <a href="#s4">04 Gỡ theo thứ tự</a>
+    <a href="#s5">05 Đường tới 450tr</a>
+    <a href="#s6">06 Hai gói</a>
+    <a href="#s7">07 Các gói khác</a>
+    <a href="#s8">08 Giả định</a>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+<header>
+  <div class="kick">NGỌT — Studio Consultancy · Biên bản Tâm sự cùng chủ Studio</div>
+  <h1>Studio không thiếu khách.<br>Studio đang thiếu <em>thời gian của chủ</em>.</h1>
+  <p class="lede">Gửi anh Trần Trọng Tín — <b>Trọng Tín Baby House</b>, Củ Chi. Baby · Gia đình · Bầu.</p>
+  <p class="lede">Bản này ráp lại các con số anh kể trong buổi Tâm sự. Mỗi nút nghẽn đi đủ 4 bước: <b>vấn đề · nguyên nhân · tác hại · nếu sửa được.</b> Đọc khoảng 8 phút.</p>
+  <div class="stance">Tôi không dạy nghề. Tôi cố vấn vận hành cho doanh nghiệp studio.</div>
+
+  <div class="road">
+    <div><div class="rn">HIỆN TẠI</div><div class="rt">115tr</div><div class="rd">47,5 show · đơn 2,42tr</div></div>
+    <div><div class="rn">CÔNG SUẤT DÙNG</div><div class="rt">26%</div><div class="rd">47,5 / 180 ca mục tiêu</div></div>
+    <div><div class="rn">MỤC TIÊU 2 NĂM</div><div class="rt">450tr</div><div class="rd">gấp 3,9 lần hiện tại</div></div>
+    <div><div class="rn">NÚT NGHẼN SỐ 1</div><div class="rt">Người, không phải ads</div><div class="rd">quy trình sale – CSKH – upsell</div></div>
+  </div>
+</header>
+
+<!-- ══ 01 ══ -->
+<section id="s1">
+  <div class="sh"><span class="no">01</span><h2>Bức tranh anh Tín kể</h2><span class="tail">Toàn bộ số là của anh Tín</span></div>
+  <p class="body">Số dưới đây là nền của cả bản. <b>Chỗ nào tôi ghi sai, anh sửa giúp</b> — mọi phép tính phía sau sẽ đổi theo.</p>
+
+  <div class="facts">
+    <div><div class="fl">Doanh thu tháng</div><div class="fv">100–130tr</div><div class="fn">3 tháng gần nhất · đều, không tăng</div></div>
+    <div><div class="fl">Số show tháng</div><div class="fv">45–50</div><div class="fn">đi ngang 3 tháng liền</div></div>
+    <div><div class="fl">Quảng cáo</div><div class="fv">12tr</div><div class="fn">khách đến chủ yếu từ ads fanpage</div></div>
+    <div><div class="fl">Mục tiêu</div><div class="fv">180 ca</div><div class="fn">6 ca/ngày × 30 · lấp 70% sàn 200m²</div></div>
+  </div>
+
+  <div class="saidlist">
+    <div class="said">
+      <span class="sl">Đội ngũ &amp; chi phí</span>
+      <ul>
+        <li><b>3 nhân sự chính:</b> 1 sale · 1 hoạt náo · 1 photo — lương 30–35tr</li>
+        <li><b>2 vợ chồng:</b> anh chụp chính, chị makeup — <b>chưa tính lương</b></li>
+        <li>Freelance 9tr · Mặt bằng 8tr · Điện nước wifi 6tr</li>
+        <li>Ads 12tr · In ấn 10tr · Đạo cụ ~8tr</li>
+      </ul>
+    </div>
+    <div class="said">
+      <span class="sl">Anh Tín nói đang vướng</span>
+      <ul>
+        <li>Studio <b>đủ vận hành nhưng chưa ra lời</b></li>
+        <li>Doanh thu kẹt, show không tăng</li>
+        <li><b>Tháng gần nhất đổ 20tr ads</b> (tăng ~60%), thêm ~40 khách, doanh thu tăng ~40%</li>
+        <li>Muốn 180 hợp đồng/tháng, mặt bằng 8–10% doanh thu, ads giữ 12tr</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 ══ -->
+<section id="s2">
+  <div class="sh"><span class="no">02</span><h2>Số tôi đọc ra</h2><span class="tail">Tính từ mốc giữa · xem phần 08</span></div>
+
+  <div class="facts">
+    <div><div class="fl">Trung bình đơn</div><div class="fv">2,42tr</div><div class="eq">115tr ÷ 47,5 show</div></div>
+    <div><div class="fl">Ads / doanh thu</div><div class="fv">10,4%</div><div class="eq">12tr ÷ 115tr</div><div class="fn">~250k mỗi đơn — chưa cao</div></div>
+    <div><div class="fl">In ấn / doanh thu</div><div class="fv alert">8,7%</div><div class="eq">10tr ÷ 115tr</div><div class="fn">bán in thu về ≈ 10tr — gần hoà</div></div>
+    <div><div class="fl">Mặt bằng / doanh thu</div><div class="fv good">7,0%</div><div class="eq">8tr ÷ 115tr</div><div class="fn">đã dưới ngưỡng 8–10%</div></div>
+    <div><div class="fl">Tổng chi</div><div class="fv">85,5tr</div><div class="eq">7 khoản anh kể</div></div>
+    <div><div class="fl">Còn lại</div><div class="fv alert">29,5tr</div><div class="eq">= 25,7% doanh thu</div><div class="fn">cho 2 người làm full-time</div></div>
+    <div><div class="fl">Điểm hoà vốn</div><div class="fv">78,5tr</div><div class="eq">63,5tr định phí ÷ 80,9%</div><div class="fn">chưa tính lương 2 vợ chồng</div></div>
+    <div><div class="fl">Công suất đang dùng</div><div class="fv alert">26%</div><div class="eq">47,5 ÷ 180 ca</div><div class="fn">1,6 show/ngày</div></div>
+  </div>
+
+  <div class="pl">
+    <div class="plh">115 triệu mỗi tháng đang đi đâu</div>
+    <div class="plbar">
+      <div style="width:28.3%;background:#6E8698" title="Lương 3 nhân sự 32,5tr">Lương 28%</div>
+      <div style="width:7.8%;background:#3A4A5C;color:#F5F0E8" title="Freelance 9tr">FL</div>
+      <div style="width:7%;background:#8A7F74" title="Mặt bằng 8tr">MB</div>
+      <div style="width:5.2%;background:#5d5750;color:#F5F0E8" title="Điện nước 6tr">ĐN</div>
+      <div style="width:10.4%;background:#C9A84C" title="Ads 12tr">Ads</div>
+      <div style="width:8.7%;background:#B5766A" title="In ấn 10tr">In</div>
+      <div style="width:7%;background:#8C6D2A;color:#F5F0E8" title="Đạo cụ 8tr">ĐC</div>
+      <div style="width:25.6%;background:#7FA88B" title="Còn lại 29,5tr">Còn 29,5tr</div>
+    </div>
+    <div class="pllg">
+      <span><i style="background:#6E8698"></i>Lương NV 32,5tr</span><span><i style="background:#3A4A5C"></i>Freelance 9tr</span>
+      <span><i style="background:#8A7F74"></i>Mặt bằng 8tr</span><span><i style="background:#5d5750"></i>Điện nước 6tr</span>
+      <span><i style="background:#C9A84C"></i>Ads 12tr</span><span><i style="background:#B5766A"></i>In 10tr</span>
+      <span><i style="background:#8C6D2A"></i>Đạo cụ 8tr</span><span><i style="background:#7FA88B"></i>Còn lại 29,5tr</span>
+    </div>
+    <div class="plnote">29,5tr không phải lời. Đó là <b>lương của 2 vợ chồng</b> — khoảng 14,75tr/người cho 2 vị trí chụp chính và makeup + quản lý. <b>Studio "đủ vận hành" vì chủ đang làm không công phần lương của mình.</b></div>
+  </div>
+
+  <h3 style="font-family:var(--display);font-size:20px;font-weight:700;margin:30px 0 4px">Thời gian 2 vợ chồng đang đi đâu</h3>
+  <p class="body" style="font-size:14px">Đây là con số quan trọng nhất trong buổi — quan trọng hơn cả ads.</p>
+  <div class="tb">
+    <div class="tbc">
+      <div class="who">Anh Tín</div><div class="role">Chủ · chụp chính</div>
+      <div class="tr keep"><div><div class="tl">Chụp hình &amp; hậu kỳ</div><div class="tbar"><i style="width:30%"></i></div></div><div class="tp">30%</div></div>
+      <div class="tr"><div><div class="tl">Duyệt video / bài fanpage</div><div class="tbar"><i style="width:10%"></i></div></div><div class="tp">10%</div></div>
+      <div class="tr"><div><div class="tl">Chạy ads</div><div class="tbar"><i style="width:20%"></i></div></div><div class="tp">20%</div></div>
+      <div class="tr move"><div><div class="tl">Xử lý các việc khác — không tên</div><div class="tbar"><i style="width:40%"></i></div></div><div class="tp">40%</div></div>
+    </div>
+    <div class="tbc">
+      <div class="who">Chị (vợ anh Tín)</div><div class="role">Makeup · quản lý</div>
+      <div class="tr keep"><div><div class="tl">Makeup &amp; quan sát buổi chụp</div><div class="tbar"><i style="width:50%"></i></div></div><div class="tp">50%</div></div>
+      <div class="tr"><div><div class="tl">Quản lý nhân sự (nhắc nhở)</div><div class="tbar"><i style="width:20%"></i></div></div><div class="tp">20%</div></div>
+      <div class="tr move"><div><div class="tl">Bán upsell sau chụp</div><div class="tbar"><i style="width:30%"></i></div></div><div class="tp">30%</div></div>
+    </div>
+  </div>
+  <div class="tkey"><span><i style="background:var(--gold)"></i>Việc nên giữ</span><span><i style="background:var(--steel-light)"></i>Giao dần</span><span><i style="background:var(--alert)"></i>Chuyển ngay</span></div>
+
+  <div class="callout steel">
+    <span class="cl">Đọc nhanh</span>
+    <p><b>4/10 giờ của anh Tín</b> đi vào "việc khác". <b>3/10 giờ của chị</b> đi vào upsell — việc lẽ ra của sale. Show đi ngang 3 tháng ở 45–50 không phải vì thiếu khách, mà vì <b>mọi khâu sau khi khách nhắn tin đều phải đi qua tay 2 vợ chồng</b>.</p>
+  </div>
+</section>
+
+<!-- ══ 03 ══ -->
+<section id="s3">
+  <div class="sh"><span class="no">03</span><h2>Bốn nút nghẽn tôi đọc ra</h2><span class="tail">Bấm để mở từng nút</span></div>
+  <p class="body">Xếp theo mức độ chặn tăng trưởng. Thứ tự gỡ nằm ở phần 04.</p>
+
+  <div class="dcard open">
+    <div class="dh"><span class="dnum">01</span>
+      <span class="dtt">Sale – CSKH – upsell chưa có quy trình, đang dựa vào chủ<small>Bán hàng · Chăm sóc sau chụp</small></span>
+      <span class="dx">+</span></div>
+    <div class="db">
+      <div class="dsteps">
+        <div class="dstep s1"><div class="dl"><i>1</i>Vấn đề</div>
+          <div class="dbig">30%</div>
+          <p>thời gian của chị dành cho upsell. <b>Sale nhân viên chưa nhận CSKH sau chụp.</b></p>
+          <p>Tỉ lệ upsell tôi đọc ra: <b>~30%</b>.</p></div>
+        <div class="dstep s2"><div class="dl"><i>2</i>Nguyên nhân</div>
+          <ul>
+            <li>Chưa có quy trình sale &amp; CSKH viết ra</li>
+            <li>Chưa có chỉ số đo sale, đo CSKH</li>
+            <li>Upsell là <b>kỹ năng của chị</b>, chưa thành quy trình giao được</li>
+          </ul></div>
+        <div class="dstep s3"><div class="dl"><i>3</i>Tác hại</div>
+          <div class="dbig">Trần 50</div>
+          <p>show/tháng. Mỗi show thêm = thêm việc cho 2 vợ chồng.</p>
+          <p>Không đo → <b>không biết khách rơi ở bước nào</b>.</p></div>
+        <div class="dstep s4"><div class="dl"><i>4</i>Nếu sửa được</div>
+          <div class="dbig">+4,75tr</div>
+          <p>mỗi tháng cho <b>mỗi +100k</b> trung bình đơn, ở 47,5 show.</p>
+          <p>Ở 161 show (mốc 450tr): <b>+16tr/tháng</b>.</p></div>
+      </div>
+      <div class="dsrc">Chị: 30% bán upsell · 20% quản lý nhân sự · 1 bạn sale · chưa có quy trình sale &amp; CSKH</div>
+    </div>
+  </div>
+
+  <div class="dcard">
+    <div class="dh"><span class="dnum">02</span>
+      <span class="dtt">Chủ studio là nút cổ chai của chính mình<small>Phân bổ nguồn lực · Vai trò</small></span>
+      <span class="dx">+</span></div>
+    <div class="db">
+      <div class="dsteps">
+        <div class="dstep s1"><div class="dl"><i>1</i>Vấn đề</div>
+          <div class="dbig">60%</div>
+          <p>thời gian anh Tín không nằm ở chụp: <b>40% việc khác + 20% chạy ads</b>.</p></div>
+        <div class="dstep s2"><div class="dl"><i>2</i>Nguyên nhân</div>
+          <ul>
+            <li>Chưa có ai được đào tạo để <b>thay anh ở sản xuất</b></li>
+            <li>Việc phát sinh không có người nhận → dồn về chủ</li>
+            <li>Chị vừa makeup, vừa quản lý, vừa bán — <b>3 vai 1 người</b></li>
+          </ul></div>
+        <div class="dstep s3"><div class="dl"><i>3</i>Tác hại</div>
+          <div class="dbig">29,5tr</div>
+          <p>là toàn bộ phần còn lại — <b>đúng bằng lương 2 người</b>.</p>
+          <p>Lên 180 ca mà giữ cách này thì <b>2 vợ chồng gãy trước studio</b>.</p></div>
+        <div class="dstep s4"><div class="dl"><i>4</i>Nếu sửa được</div>
+          <div class="dbig">2 ekip</div>
+          <p>chạy song song, chủ không phải đứng trong từng ca.</p>
+          <p>Chị chuyển sang <b>giám sát concept + ca chụp</b>, hỗ trợ anh quản lý sale.</p></div>
+      </div>
+      <div class="dsrc">Anh Tín: 30% chụp &amp; hậu kỳ · 10% duyệt nội dung · 20% ads · 40% việc khác</div>
+    </div>
+  </div>
+
+  <div class="dcard">
+    <div class="dh"><span class="dnum">03</span>
+      <span class="dtt">In ấn đang bán gần bằng giá vốn<small>Chi phí biến đổi · Nhà in</small></span>
+      <span class="dx">+</span></div>
+    <div class="db">
+      <div class="dsteps">
+        <div class="dstep s1"><div class="dl"><i>1</i>Vấn đề</div>
+          <div class="dbig">10 / 10</div>
+          <p>Chi nhà in <b>10tr</b>. Thu từ dịch vụ in <b>hơn 10tr một chút</b>.</p></div>
+        <div class="dstep s2"><div class="dl"><i>2</i>Nguyên nhân</div>
+          <ul>
+            <li><b>Giá gốc lab in cao</b></li>
+            <li>Chưa deal lại theo sản lượng</li>
+            <li>Giá bán sản phẩm in chưa tính đủ biên</li>
+          </ul></div>
+        <div class="dstep s3"><div class="dl"><i>3</i>Tác hại</div>
+          <div class="dbig">8,7%</div>
+          <p>doanh thu đi vào in. Lên 450tr mà giữ tỉ lệ này: <b>~39tr/tháng</b>.</p></div>
+        <div class="dstep s4"><div class="dl"><i>4</i>Nếu sửa được</div>
+          <div class="dbig">6–8%</div>
+          <p>Hôm nay: tiết kiệm <b>2–3tr/tháng</b>.</p>
+          <p>Ở mốc 450tr: <b>7–12tr/tháng</b>. Làm được trong <b>1–2 tuần</b>.</p></div>
+      </div>
+      <div class="dsrc">Chi nhà in 10tr · doanh thu in ấn hơn 10tr · có thể deal lại về 6–8%</div>
+    </div>
+  </div>
+
+  <div class="dcard">
+    <div class="dh"><span class="dnum">04</span>
+      <span class="dtt">Ads chưa hiệu quả — nhưng chưa phải nút lớn nhất<small>Marketing · Làm sau</small></span>
+      <span class="dx">+</span></div>
+    <div class="db">
+      <div class="dsteps">
+        <div class="dstep s1"><div class="dl"><i>1</i>Vấn đề</div>
+          <div class="dbig">+60%</div>
+          <p>ads tháng gần nhất (lên 20tr) → doanh thu <b>+40%</b>.</p></div>
+        <div class="dstep s2"><div class="dl"><i>2</i>Nguyên nhân</div>
+          <ul>
+            <li>Anh tự chạy ads — 20% quỹ giờ</li>
+            <li>Chưa đo được data → show theo từng nguồn</li>
+          </ul></div>
+        <div class="dstep s3"><div class="dl"><i>3</i>Tác hại</div>
+          <div class="dbig">Nhỏ</div>
+          <p>Tăng tiền ads, <b>tỉ lệ chuyển đổi giảm không nhiều</b>. Data về không xấu.</p>
+          <p>Ads/doanh thu 10,4% — trong ngưỡng.</p></div>
+        <div class="dstep s4"><div class="dl"><i>4</i>Nếu sửa được</div>
+          <div class="dbig">Mở van</div>
+          <p>Ads là <b>van</b>, không phải ống. Mở van khi ống (sale – CSKH – ekip) đã đủ to.</p>
+          <p>Mở trước: data về nhiều, <b>2 vợ chồng ôm thêm</b>.</p></div>
+      </div>
+      <div class="dsrc">Tháng gần nhất đổ 20tr ads · thêm ~40 khách · data về hợp lý</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 04 ══ -->
+<section id="s4">
+  <div class="sh"><span class="no">04</span><h2>Gỡ theo thứ tự nào — và vì sao</h2><span class="tail">Đúng thứ tự quan trọng hơn làm nhiều</span></div>
+
+  <div class="prio">
+    <div class="pc p1"><div class="po">Bước 1 · Tuần 1–4</div><h4>Phân lại vai 2 vợ chồng</h4>
+      <p>Chị rút khỏi CSKH &amp; upsell → đào tạo, bàn giao cho sale. Chị nhận giám sát concept + ca chụp. Anh Tín vào cùng phần sale – CSKH.</p>
+      <span class="pw">Vì sao trước: mọi bước sau đều cần giờ của chủ</span></div>
+    <div class="pc p1"><div class="po">Bước 2 · Song song</div><h4>Quy trình sale – CSKH – upsell + chỉ số đo</h4>
+      <p>Viết ra để giao được. Đo: tỉ lệ chốt, tỉ lệ upsell, trung bình đơn, khách rơi ở bước nào.</p>
+      <span class="pw">Vì sao: đây là thứ để chị giao đi mà không mất doanh thu upsell</span></div>
+    <div class="pc"><div class="po">Bước 3 · Tuần 2–3</div><h4>Deal lại nhà in</h4>
+      <p>Từ 8,7–10% về 6–8% doanh thu. Việc của 1 người, 1–2 tuần.</p>
+      <span class="pw">Vì sao: tiền nhanh nhất, không đụng tới khách</span></div>
+    <div class="pc"><div class="po">Bước 4 · Từ tháng 3</div><h4>Mở van ads theo 10% doanh thu</h4>
+      <p>Chỉ tăng ads khi sale xử lý kịp data và ekip còn chỗ. Anh dần rút khỏi chạy ads.</p>
+      <span class="pw">Vì sao sau: đổ khách vào phễu chưa khoẻ = thêm việc cho chủ</span></div>
+  </div>
+
+  <div class="callout">
+    <span class="cl">Một câu</span>
+    <p>Anh Tín đang hỏi <b>"làm sao có thêm khách"</b>. Câu đúng hơn: <b>"ai phục vụ khách thứ 51 mà không phải là vợ chồng mình?"</b> Trả lời được câu này thì câu kia gần như tự có đáp án — ads đã chứng minh là mua được data.</p>
+  </div>
+</section>
+
+<!-- ══ 05 ══ -->
+<section id="s5">
+  <div class="sh"><span class="no">05</span><h2>Đường tới 450 triệu</h2><span class="tail">Mục tiêu 2 năm · bấm mốc, kéo thử</span></div>
+  <p class="body">Anh tính 450tr = <b>180 ca × 2,5tr</b>. Tôi đề xuất đi bằng 2 chân: <b>tăng show và tăng trung bình đơn</b>. Mỗi +100k trung bình đơn là bớt ~6 show/tháng phải chạy ở mốc 450tr.</p>
+
+  <div class="mt" id="mt">
+    <button data-m="0" class="on"><span class="mn">Hiện tại</span><span class="mv">115tr</span><span class="md">47,5 show</span></button>
+    <button data-m="1"><span class="mn">Mốc 1 · Tháng 3</span><span class="mv">150tr</span><span class="md">60 show</span></button>
+    <button data-m="2"><span class="mn">Mốc 2 · Tháng 9</span><span class="mv">250tr</span><span class="md">96 show</span></button>
+    <button data-m="3"><span class="mn">Mốc 3 · Tháng 15</span><span class="mv">350tr</span><span class="md">130 show</span></button>
+    <button data-m="4"><span class="mn">Mốc 4 · Tháng 24</span><span class="mv">450tr</span><span class="md">161 show</span></button>
+  </div>
+  <div class="mwork" id="mwork"></div>
+
+  <div class="pln">
+    <div class="sl3">
+      <div><label>Doanh thu mục tiêu <span class="cv" id="vRev">115</span>tr</label><input type="range" id="iRev" min="100" max="500" step="5" value="115"><div class="sn">triệu / tháng</div></div>
+      <div><label>Trung bình đơn <span class="cv" id="vAov">2,42</span>tr</label><input type="range" id="iAov" min="2" max="3.5" step="0.01" value="2.42"><div class="sn">hiện tại 2,42tr · anh Tín tính 2,5tr</div></div>
+      <div><label>Tỉ lệ chuyển đổi <span class="cv" id="vCr">25</span>%</label><input type="range" id="iCr" min="10" max="50" step="1" value="25"><div class="sn">data → show · <b style="color:var(--alert)">chưa đo, đang giả định</b></div></div>
+    </div>
+
+    <div class="po4">
+      <div><div class="k">Số show cần</div><div class="v" id="oShow">–</div><div class="n" id="oShowN">–</div></div>
+      <div><div class="k">Số leads (data) cần</div><div class="v" id="oLead">–</div><div class="n" id="oLeadN">–</div></div>
+      <div><div class="k">Ngân sách ads</div><div class="v" id="oAds">–</div><div class="n" id="oAdsN">giữ 10% doanh thu</div></div>
+      <div><div class="k">Nhân sự vận hành</div><div class="v" id="oStaff">–</div><div class="n">không tính 2 vợ chồng</div></div>
+    </div>
+
+    <div class="cap"><i id="capBar" style="width:26%"></i></div>
+    <div class="capl"><span>Công suất dùng: <b id="capTxt" style="color:var(--gold)">26%</b> của 180 ca</span><span>180 ca = 70% sàn</span></div>
+
+    <div class="staff">
+      <table>
+        <tr><th>Vị trí</th><th class="num">Cần</th><th>Cách tính</th></tr>
+        <tr><td><b>Ekip chụp</b> (photo + hoạt náo + makeup)</td><td class="num" id="tEkip">–</td><td id="tEkipN">–</td></tr>
+        <tr><td><b>Sale</b> — tư vấn, chốt</td><td class="num" id="tSale">–</td><td id="tSaleN">–</td></tr>
+        <tr><td><b>CSKH &amp; upsell</b> sau chụp</td><td class="num" id="tCs">–</td><td id="tCsN">–</td></tr>
+        <tr><td><b>Hậu kỳ</b></td><td class="num" id="tEd">–</td><td id="tEdN">–</td></tr>
+        <tr class="emph"><td><b>Tổng</b></td><td class="num" id="tSum">–</td><td>Hiện có: 3 nhân sự + 1 freelance + 2 vợ chồng đứng ca</td></tr>
+      </table>
+    </div>
+
+    <details class="norm">
+      <summary>Chỉnh định mức năng suất (giả định của tôi — anh sửa theo thực tế)</summary>
+      <div class="sl3">
+        <div><label>Ca / ekip / ngày <span class="cv" id="vCa">3</span></label><input type="range" id="iCa" min="2" max="5" step="1" value="3"></div>
+        <div><label>Data / sale / tháng <span class="cv" id="vLs">300</span></label><input type="range" id="iLs" min="150" max="600" step="25" value="300"></div>
+        <div><label>Show / hậu kỳ / tháng <span class="cv" id="vEd">70</span></label><input type="range" id="iEd" min="40" max="120" step="5" value="70"></div>
+      </div>
+      <div class="sl3" style="margin-top:0">
+        <div><label>Show / CSKH / tháng <span class="cv" id="vCs">90</span></label><input type="range" id="iCs" min="50" max="150" step="5" value="90"></div>
+      </div>
+    </details>
+
+    <div class="cbadge" id="pMsg">–</div>
+  </div>
+
+  <div class="callout steel">
+    <span class="cl">Vì sao đặt mốc 2 ở 250tr</span>
+    <p>250tr là lúc studio cần <b>ekip thứ 2</b> và <b>sale thứ 2</b>. Nếu bước 1–2 ở phần 04 chưa xong, đây là chỗ vỡ. Mốc 2 cũng là ngưỡng studio đủ điều kiện dùng gói Đồng hành (phần 07).</p>
+  </div>
+</section>
+
+<!-- ══ 06 ══ -->
+<section id="s6">
+  <div class="sh"><span class="no">06</span><h2>Hai gói phù hợp với anh Tín</h2><span class="tail">Chỉ đường hay đi cùng</span></div>
+
+  <div class="pk">
+    <div class="pkc reco">
+      <div class="pkh">
+        <div class="pkt">Bậc 03 <em>đề xuất bắt đầu</em></div>
+        <h3>Khai thông điểm nghẽn</h3>
+        <div class="pkprice">6.000.000<small>đồng · trọn gói</small></div>
+      </div>
+      <div class="pkline">Tôi chỉ đường. Anh tự đi.</div>
+      <div class="pkb">
+        <div class="pkrow"><div class="k">Cách làm</div><div class="v"><b>2 buổi 1:1 × 2 tiếng.</b> Buổi 1 truy nguyên nhân. Buổi 2 giao phác đồ + cam kết triển khai.</div></div>
+        <div class="pkrow"><div class="k">Anh gỡ được</div><div class="v">
+          <ul class="solves">
+            <li>Dựng lại <b>quy trình sale &amp; CSKH</b></li>
+            <li><b>Chỉ số đo sale</b> để cải thiện tư vấn</li>
+            <li><b>Chỉ số đo CSKH</b></li>
+            <li><b>Quy trình upsell</b> sản phẩm — để chị giao đi</li>
+            <li>Sơ lược cách <b>chạy ads hiệu quả</b></li>
+            <li>Checklist triển khai <b>30 · 60 · 90 ngày</b></li>
+          </ul></div></div>
+        <div class="pkrow"><div class="k">Hợp khi</div><div class="v">Bạn sale hiện tại đủ sức nhận thêm CSKH &amp; upsell, và 2 vợ chồng tự triển khai được.</div></div>
+        <div class="pkrow"><div class="k">Đáng giá</div><div class="v">= <b>5,2%</b> doanh thu 1 tháng. Riêng deal lại nhà in (2–3tr/tháng) đủ hoàn vốn trong <b>2–3 tháng</b>.</div></div>
+      </div>
+    </div>
+
+    <div class="pkc">
+      <div class="pkh">
+        <div class="pkt">Bậc 04 · làm cùng anh</div>
+        <h3>Kiến tạo Mắt xích Vận hành Studio</h3>
+        <div class="pkprice">18.000.000<small>đồng · đợt 6–8 tuần</small></div>
+      </div>
+      <div class="pkline">Tôi đi cùng anh.</div>
+      <div class="pkb">
+        <div class="pkrow"><div class="k">Cách làm</div><div class="v">Lắp <b>1–2 mắt xích nặng nhất</b> trong 6–8 tuần. Tôi trực tiếp làm cùng, không giao tài liệu rồi rút.</div></div>
+        <div class="pkrow"><div class="k">Với Trọng Tín</div><div class="v">Mắt xích 1: <b>Sale – CSKH – upsell</b>. Mắt xích 2: <b>phân vai &amp; bàn giao</b> từ 2 vợ chồng xuống đội.</div></div>
+        <div class="pkrow"><div class="k">Anh nhận</div><div class="v">Biểu mẫu <b>may riêng</b> · <b>đào tạo trực tiếp</b> người vận hành · theo sát, chỉnh khi lệch · bàn giao tài liệu.</div></div>
+        <div class="pkrow"><div class="k">Hợp khi</div><div class="v">2 vợ chồng <b>không còn giờ</b> để tự đào tạo sale và tự viết quy trình.</div></div>
+        <div class="pkrow"><div class="k">Đáng giá</div><div class="v">= <b>15,7%</b> doanh thu 1 tháng — <b>thấp hơn 1 tháng</b> phần lương 2 vợ chồng đang nhận (29,5tr).</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="test">
+    <div class="th2">Bốn câu để anh tự chọn</div>
+    <div class="ts">Tick những câu <b>đúng với Trọng Tín lúc này</b>.</div>
+    <div class="tq" data-t><div class="tbox">✓</div><span>Bạn sale hiện tại còn thời gian nhận thêm CSKH sau chụp và upsell.</span></div>
+    <div class="tq" data-t><div class="tbox">✓</div><span>Mỗi tuần vợ chồng tôi dành ra được 4–5 tiếng để viết quy trình, ngoài giờ chụp và makeup.</span></div>
+    <div class="tq" data-t><div class="tbox">✓</div><span>Bạn photo hiện tại đủ tay nghề để tôi dần rút khỏi chụp chính.</span></div>
+    <div class="tq" data-t><div class="tbox">✓</div><span>Tôi từng tự triển khai một quy trình mới và giữ nó chạy quá 3 tháng.</span></div>
+    <div class="tres" id="tres"><span class="trh">Kết quả</span>Tick để xem gói nào hợp hơn.</div>
+  </div>
+
+  <div class="callout">
+    <span class="cl">Phần tôi không cam kết</span>
+    <p>Tôi không cam kết doanh thu. Các con số ở đây là <b>phép tính từ số liệu của anh</b>, không phải lời hứa. Thứ tôi cam kết: <b>phác đồ viết ra, thứ tự làm, cách đo.</b></p>
+  </div>
+</section>
+
+<!-- ══ 07 ══ -->
+<section id="s7">
+  <div class="sh"><span class="no">07</span><h2>Các gói khác của NSC</h2><span class="tail">Để anh biết đường đi tiếp</span></div>
+  <div class="oth">
+    <div class="oc"><div class="ol">Bậc 01 · Tâm sự</div><h4>Tâm sự cùng chủ Studio</h4><div class="op">500.000<small>/ buổi</small></div>
+      <p>Buổi meet 1:1, 45–60 phút. Bắt bệnh, gọi tên vấn đề, định hướng thứ tự ưu tiên.</p>
+      <div class="ow">Anh đã đi qua bước này — bản này là kết quả.</div></div>
+    <div class="oc"><div class="ol">Bậc 02 · Tự Xây · sắp ra mắt</div><h4>Tự Xây Nền Tảng Vận Hành Studio</h4><div class="op">2.900.000<small>/ giáo trình</small></div>
+      <p>Chọn 1 trong 3: 7 mảng vận hành · Tăng trưởng doanh thu · Hệ thống CRM. Video + tài liệu, sở hữu vĩnh viễn.</p>
+      <div class="ow">Hợp khi tự học tốt, có kỷ luật tự làm.</div></div>
+    <div class="oc"><div class="ol">Bậc 05 · Hoàn thiện hoá</div><h4>Hoàn thiện hoá hệ thống quản lý Studio</h4><div class="op">80.000.000<small>/ 3–4 tháng</small></div>
+      <p>Lắp trọn 7 mảng vận hành đang chạy ở Ngọt Studio, bộ chỉ số quản trị, đào tạo từng bộ phận, nhịp họp tuần – tháng – quý.</p>
+      <div class="ow">Hợp với Trọng Tín khi chuẩn bị mở cơ sở 2.</div></div>
+    <div class="oc"><div class="ol">Bậc 06 · Đồng hành</div><h4>Đồng hành</h4><div class="op">15%<small>doanh thu · thoả thuận riêng</small></div>
+      <p>Đội NSC nhận 4 phần việc: Digital Marketing · Sale online · Hỗ trợ hậu kỳ · Cố vấn vận hành. Chủ quay về sản xuất.</p>
+      <div class="ow">Nhận studio từ 250tr/tháng — mốc 2 trong lộ trình của anh.</div></div>
+  </div>
+</section>
+
+<!-- ══ 08 ══ -->
+<section id="s8">
+  <div class="sh"><span class="no">08</span><h2>Những con số tôi lấy mốc giữa</h2><span class="tail">Minh bạch cách tính</span></div>
+  <div class="assump">
+    <span class="al">Bảng giả định</span>
+    <table>
+      <tr><th style="width:34%">Khoản</th><th class="num" style="width:16%">Giá trị dùng</th><th>Nguồn</th></tr>
+      <tr><td>Doanh thu tháng</td><td class="num">115tr</td><td><span class="tag real">anh đưa</span> mốc giữa 100–130tr</td></tr>
+      <tr><td>Số show tháng</td><td class="num">47,5</td><td><span class="tag real">anh đưa</span> mốc giữa 45–50</td></tr>
+      <tr><td>Lương 3 nhân sự</td><td class="num">32,5tr</td><td><span class="tag real">anh đưa</span> mốc giữa 30–35tr</td></tr>
+      <tr><td>Định phí</td><td class="num">63,5tr</td><td><span class="tag est">tôi tính</span> lương NV + freelance + mặt bằng + điện nước + đạo cụ</td></tr>
+      <tr><td>Biến phí</td><td class="num">22tr</td><td><span class="tag est">tôi tính</span> ads + in = 19,1% doanh thu → biên đóng góp 80,9%</td></tr>
+      <tr><td>Tỉ lệ upsell</td><td class="num">~30%</td><td><span class="tag est">tôi đọc</span> từ số in ấn anh cung cấp</td></tr>
+      <tr class="emph"><td><b>Tháng thử tăng ads</b></td><td class="num">20tr</td><td><span class="tag real">anh đưa</span> <b>cần xác nhận: "~40 khách" là data hay khách chốt?</b> Show 3 tháng vẫn 45–50 nên tôi đọc là data</td></tr>
+      <tr class="emph"><td><b>Tỉ lệ chuyển đổi</b></td><td class="num">25%</td><td><span class="tag est">tôi giả định</span> <b>chưa có số đo — việc đầu tiên anh cần đo</b></td></tr>
+      <tr><td>Ads khi tăng trưởng</td><td class="num">10% DT</td><td><span class="tag est">tôi giả định</span> giữ đúng tỉ lệ đang chạy</td></tr>
+      <tr><td>Định mức ekip / sale / CSKH / hậu kỳ</td><td class="num">3 · 300 · 90 · 70</td><td><span class="tag est">tôi giả định</span> chỉnh được ở phần 05</td></tr>
+      <tr><td>Số ngày chạy ca</td><td class="num">30</td><td><span class="tag real">anh đưa</span> theo cách anh tính 180 ca</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <h3>Bước tiếp theo</h3>
+      <p>Nếu bản này đọc đúng Trọng Tín, anh nhắn tôi một câu kèm gói anh chọn. Tôi gửi lịch và danh sách số cần đo trong 1 tuần: <b style="color:var(--cream)">data mỗi ngày, số show chốt, số khách upsell</b>.</p>
+      <p style="margin-top:12px">Nếu chưa cần tôi lúc này — bản này là của anh, anh cứ giữ và dùng.</p>
+    </div>
+    <div class="contact">
+      <b>Đặng Thanh Quang</b>
+      <i>Founder &amp; Lead Consultant</i>
+      0916.206.866
+    </div>
+  </div>
+  <div class="sig">
+    <svg viewBox="0 0 1077 952"><use href="#nsc-mark"/></svg>
+    <div>NGỌT — Studio Consultancy · Biên bản Tâm sự cùng chủ Studio<br>Trọng Tín Baby House — anh Trần Trọng Tín, Củ Chi · 30.09.2026
+      <em>Đam mê dựng nghề, hệ thống giữ nghiệp.</em>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<button class="topb" id="topb" aria-label="Lên đầu trang">↑</button>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  var $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+
+  var bg=$('#burger'),nl=$('#navList');
+  bg.addEventListener('click',function(){nl.classList.toggle('show')});
+  $$('#navList a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('show')})});
+  var secs=$$('section[id]'),links=$$('#navList a');
+  function sync(){
+    var y=window.scrollY+140,cur='';
+    secs.forEach(function(s){if(s.offsetTop<=y)cur=s.id});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+    $('#topb').classList.toggle('show',window.scrollY>600);
+  }
+  window.addEventListener('scroll',sync,{passive:true});sync();
+  $('#topb').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+  $$('.dh').forEach(function(h){h.addEventListener('click',function(){h.parentNode.classList.toggle('open')})});
+
+  /* ── planner ── */
+  function f(n,d){return n.toLocaleString('vi-VN',{minimumFractionDigits:d,maximumFractionDigits:d})}
+  var M=[
+    {rev:115,aov:2.42,cr:25,w:'<b>Điểm xuất phát.</b> 2 vợ chồng đứng trong ca. Chưa đo tỉ lệ chuyển đổi.'},
+    {rev:150,aov:2.5,cr:28,w:'<b>Bước 1–3:</b> phân lại vai · quy trình sale – CSKH – upsell · deal nhà in. Bắt đầu đo tỉ lệ chuyển đổi.'},
+    {rev:250,aov:2.6,cr:30,w:'<b>Mở van ads</b> theo 10% doanh thu · tuyển &amp; đào tạo <b>sale 2, ekip 2</b> · anh Tín rút khỏi chạy ads.'},
+    {rev:350,aov:2.7,cr:32,w:'<b>2 ekip chạy đều</b> · chị giám sát concept &amp; ca chụp · anh Tín chỉ chụp các ca cao cấp.'},
+    {rev:450,aov:2.8,cr:33,w:'<b>Studio chạy không cần chủ trong từng ca.</b> 161 show × 2,8tr — còn dư ~11% công suất để thở.'}
+  ];
+  var iRev=$('#iRev'),iAov=$('#iAov'),iCr=$('#iCr'),iCa=$('#iCa'),iLs=$('#iLs'),iCs=$('#iCs'),iEd=$('#iEd');
+  function setM(i){
+    $$('#mt button').forEach(function(b){b.classList.toggle('on',+b.dataset.m===i)});
+    iRev.value=M[i].rev;iAov.value=M[i].aov;iCr.value=M[i].cr;
+    $('#mwork').innerHTML=M[i].w;plan();
+  }
+  $$('#mt button').forEach(function(b){b.addEventListener('click',function(){setM(+b.dataset.m)})});
+  function clearM(){$$('#mt button').forEach(function(b){b.classList.remove('on')});$('#mwork').innerHTML='<b>Đang kéo tự do.</b> Bấm một mốc để quay lại lộ trình đề xuất.'}
+  [iRev,iAov,iCr].forEach(function(el){el.addEventListener('input',function(){clearM();plan()})});
+  [iCa,iLs,iCs,iEd].forEach(function(el){el.addEventListener('input',plan)});
+
+  function plan(){
+    var rev=+iRev.value,aov=+iAov.value,cr=+iCr.value,ca=+iCa.value,ls=+iLs.value,cs=+iCs.value,ed=+iEd.value;
+    $('#vRev').textContent=rev;$('#vAov').textContent=f(aov,2);$('#vCr').textContent=cr;
+    $('#vCa').textContent=ca;$('#vLs').textContent=ls;$('#vCs').textContent=cs;$('#vEd').textContent=ed;
+    var show=rev/aov,day=show/30,lead=show/(cr/100),ads=rev*0.10;
+    $('#oShow').textContent=f(show,0);
+    $('#oShowN').textContent=f(day,1)+' show/ngày · ×'+f(show/47.5,1)+' hiện tại';
+    $('#oLead').textContent=f(lead,0);
+    $('#oLeadN').textContent=f(lead/30,0)+' data/ngày';
+    $('#oAds').textContent=f(ads,1)+'tr';
+    $('#oAdsN').textContent='10% DT · ~'+f(ads*1000/lead,0)+'k/data được phép';
+    var eK=Math.max(1,Math.ceil(day/ca-0.001)),sa=Math.max(1,Math.ceil(lead/ls-0.001)),
+        cK=Math.max(1,Math.ceil(show/cs-0.001)),eD=Math.max(1,Math.ceil(show/ed-0.001));
+    var tot=eK*3+sa+cK+eD;
+    $('#tEkip').innerHTML='<b>'+eK+'</b> ekip · '+(eK*3)+' người';
+    $('#tEkipN').textContent=f(day,1)+' show/ngày ÷ '+ca+' ca/ekip';
+    $('#tSale').innerHTML='<b>'+sa+'</b>';$('#tSaleN').textContent=f(lead,0)+' data ÷ '+ls+'/người';
+    $('#tCs').innerHTML='<b>'+cK+'</b>';$('#tCsN').textContent=f(show,0)+' show ÷ '+cs+'/người';
+    $('#tEd').innerHTML='<b>'+eD+'</b>';$('#tEdN').textContent=f(show,0)+' show ÷ '+ed+'/người';
+    $('#tSum').innerHTML='<b>'+tot+'</b>';
+    $('#oStaff').textContent=tot+' người';
+    var cp=show/180*100;
+    $('#capBar').style.width=Math.min(100,cp)+'%';
+    $('#capTxt').textContent=f(cp,0)+'%';
+    $('#capTxt').style.color=cp>100?'var(--alert)':'var(--gold)';
+    var m;
+    if(cp>100){m='<b>Vượt 180 ca.</b> Sàn 200m² không gánh nổi — kéo <b>trung bình đơn</b> lên thay vì thêm show.';}
+    else if(eK>=2){m='Cần <b>'+eK+' ekip</b>: 2 vợ chồng <b>không thể đứng trong mọi ca</b> nữa. Bước 1–2 ở phần 04 phải xong trước mốc này.';}
+    else{m='1 ekip vẫn gánh được. Đây là lúc <b>viết quy trình và đo</b> — trước khi ekip 2 xuất hiện.';}
+    m+=' Mỗi +1 điểm tỉ lệ chuyển đổi = bớt <b>'+f(show/(cr/100)-show/((cr+1)/100),0)+' data</b> phải mua mỗi tháng.';
+    $('#pMsg').innerHTML=m;
+  }
+  setM(0);
+
+  /* self test */
+  var tqs=$$('[data-t]'),tres=$('#tres');
+  function syncTest(){
+    var n=$$('[data-t].on').length,h='<span class="trh">Kết quả · '+n+'/4</span>';
+    if(n===0)h+='Tick để xem gói nào hợp hơn.';
+    else if(n<=1)h+='Phần <b>triển khai</b> sẽ là chỗ vướng. <b>Kiến tạo Mắt xích</b> hợp hơn — tôi làm cùng anh. Nếu chưa sẵn 18tr, bắt đầu bằng <b>Khai thông</b> vẫn hơn đứng yên.';
+    else if(n<=2)h+='<b>Khai thông</b> đi được nếu tập trung đúng nút 01 và 03. Nút 02 (phân vai) nên có người đi cùng — nâng lên Mắt xích sau cũng được.';
+    else h+='<b>Khai thông</b> là đủ. Anh có nguồn lực để tự triển khai — thứ anh cần là phác đồ và thứ tự đúng.';
+    tres.innerHTML=h;
+  }
+  tqs.forEach(function(q){q.addEventListener('click',function(){q.classList.toggle('on');syncTest()})});
+})();
+</script>
+
+</body>
+</html>
